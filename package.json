@@ -1,5 +1,5 @@
 {
-  "name": "discord.js-11to12",
+  "name": "discord.js-old-methods",
   "version": "0.0.1",
   "description": "Adds discord.js v11 methods to v12.",
   "main": "index.js",
