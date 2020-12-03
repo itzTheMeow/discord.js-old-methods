@@ -1,0 +1,26 @@
+{
+  "name": "discord.js-11to12",
+  "version": "0.0.1",
+  "description": "Adds discord.js v11 methods to v12.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzTheMeow/discord.js-11to12.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "v11",
+    "v12",
+    "discordapi"
+  ],
+  "author": "Meow & Verico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itzTheMeow/discord.js-11to12/issues"
+  },
+  "homepage": "https://github.com/itzTheMeow/discord.js-11to12#readme"
+}
