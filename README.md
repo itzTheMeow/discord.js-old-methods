@@ -19,6 +19,18 @@ The methods discussed [here](https://discordjs.guide/additional-info/changes-in-
 - ✔ GuildMember.removeRole[s]
 - ✔ GuildMember.setRoles
 - ✔ RichEmbed
+- ✘ VoiceBroadcast.playFile
+- ✘ VoiceBroadcast.playStream
+- ✘ VoiceBroadcast.playArbitraryInput
+- ✘ VoiceBroadcast.playBroadcast
+- ✘ VoiceBroadcast.playOpusStream
+- ✘ VoiceBroadcast.playConvertedStream
+- ✘ VoiceConnection.playFile
+- ✘ VoiceConnection.playStream
+- ✘ VoiceConnection.playArbitraryInput
+- ✘ VoiceConnection.playBroadcast
+- ✘ VoiceConnection.playOpusStream
+- ✘ VoiceConnection.playConvertedStream
 
 ## Notes
 \* Must use as function. It is *currently* not possible for us to make these a string. (submit a PR if you know how)
