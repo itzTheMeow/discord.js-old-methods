@@ -19,7 +19,7 @@ module.exports = function () {
   GuildMember.prototype.removeRole = GuildMember.prototype.removeRoles = function (r1, r2) {
     return this.roles.remove(r1, r2);
   };
-  GuildMember.prototype.setRole = GuildMember.prototype.setRoles = function (r1, r2) {
+  GuildMember.prototype.setRoles = function (r1, r2) {
     return this.roles.set(r1, r2);
   };
   GuildMemberRoleManager.prototype.get = function (r) {
