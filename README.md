@@ -10,6 +10,12 @@ The methods discussed [here](https://discordjs.guide/additional-info/changes-in-
 <sub><sup>*Tested methods are marked with a check.*</sup></sub>
 
 - ✔ Client.fetchUser
+- ✘ Guild.ban
+- ✘ Guild.unban
 - ✔ GuildMember.addRole[s]
+- ✔ GuildMember.colorRole (NOTE: must use as function)
+- ✔ GuildMember.highestRole (NOTE: must use as function)
+- ✔ GuildMember.hoistRole (NOTE: must use as function)
 - ✔ GuildMember.removeRole[s]
+- ✘ GuildMember.setRoles
 - ✔ RichEmbed

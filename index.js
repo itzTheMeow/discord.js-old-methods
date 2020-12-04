@@ -1,5 +1,5 @@
 const djs = require('discord.js');
-const { Client, GuildMember, UserManager, GuildMemberRoleManager } = require('discord.js');
+const { Client, GuildMember, UserManager, GuildMemberRoleManager, Guild } = require('discord.js');
 
 /**
  * Adds the methods into discord.js version 12.
@@ -7,7 +7,6 @@ const { Client, GuildMember, UserManager, GuildMemberRoleManager } = require('di
  * @return {number} x raised to the n-th power.
  */
 
-//read discord
 module.exports = function () {
   djs.RichEmbed = djs.MessageEmbed;
   Client.prototype.fetchUser = function (u1, u2, u3) {
@@ -23,11 +22,24 @@ module.exports = function () {
   GuildMember.prototype.setRole = GuildMember.prototype.setRoles = function (r1, r2) {
     return this.roles.set(r1, r2);
   };
+  GuildMemberRoleManager.prototype.get = function (r) {
+    return this.cache.get(r);
+  };
   GuildMember.prototype.colorRole = function () {
     return this.roles.color;
   };
-  GuildMemberRoleManager.prototype.highestRole = function () {};
-  GuildMemberRoleManager.prototype.hoistRole = function () {};
+  GuildMember.prototype.highestRole = function () {
+    return this.roles.highest;
+  };
+  GuildMember.prototype.hoistRole = function () {
+    return this.roles.hoist;
+  };
+  Guild.prototype.ban = function (m1, m2) {
+    return this.members.ban(m1, m2);
+  };
+  Guild.prototype.unban = function (m1, m2) {
+    return this.members.unban(m1, m2);
+  };
 
   return djs;
 };
