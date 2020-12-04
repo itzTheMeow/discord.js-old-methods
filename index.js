@@ -3,7 +3,7 @@ const { Client, GuildMember } = require('discord.js'); // include classes from l
 
 module.exports = function () {
   djs.RichEmbed = djs.MessageEmbed;
-  Client.fetchUser = Client.users.cache.fetch;
+  Client.fetchUser = Client.users.fetch;
   GuildMember.addRole = GuildMember.addRoles = GuildMember.roles.add;
   GuildMember.removeRole = GuildMember.removeRoles = GuildMember.roles.remove;
   //GuildMember.setRole = GuildMember
