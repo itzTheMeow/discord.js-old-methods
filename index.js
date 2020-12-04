@@ -1,4 +1,12 @@
-module.exports.convert = function (djs) {
+const djs = require('discord.js'); // get main library
+const { Client, GuildMember } = require('discord.js'); // include classes from library
+
+module.exports = function () {
   djs.RichEmbed = djs.MessageEmbed;
-  return djs;
-}
+  Client.fetchUser = Client.users.cache.fetch;
+  GuildMember.addRole = GuildMember.addRoles = GuildMember.roles.add;
+  GuildMember.removeRole = GuildMember.removeRoles = GuildMember.roles.remove;
+  //GuildMember.setRole = GuildMember
+
+  return djs; // output new discord.js module
+};
