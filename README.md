@@ -9,7 +9,7 @@ The methods discussed [here](https://discordjs.guide/additional-info/changes-in-
 # Methods Added so Far
 <sub><sup>*Tested methods are marked with a check.*</sup></sub>
 
-✔ Client.fetchUser
-✔ GuildMember.addRole[s]
-✔ GuildMember.removeRole[s]
-✔ RichEmbed
+- ✔ Client.fetchUser
+- ✔ GuildMember.addRole[s]
+- ✔ GuildMember.removeRole[s]
+- ✔ RichEmbed
