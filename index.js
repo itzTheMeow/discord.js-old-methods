@@ -4,8 +4,8 @@ const { Client, GuildMember, UserManager, GuildMemberRoleManager } = require('di
 module.exports = function () {
   djs.RichEmbed = djs.MessageEmbed;
   Client.fetchUser = UserManager.fetch;
-  GuildMember.addRole = GuildMember.addRoles = GuildMemberRoleManager.add;
-  GuildMember.removeRole = GuildMember.removeRoles = GuildMemberRoleManager.remove;
+  GuildMember.prototype.addRole = GuildMember.prototype.addRoles = GuildMemberRoleManager.add;
+  GuildMember.prototype.removeRole = GuildMember.prototype.removeRoles = GuildMemberRoleManager.remove;
   //GuildMember.setRole = GuildMember
 
   return djs; // output new discord.js module

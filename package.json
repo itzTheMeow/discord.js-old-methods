@@ -1,6 +1,6 @@
 {
   "name": "discord.js-old-methods",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Adds discord.js v11 methods to v12.",
   "main": "index.js",
   "scripts": {
@@ -10,13 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/itzTheMeow/discord.js-11to12.git"
   },
-  "keywords": [
-    "discord",
-    "discord.js",
-    "v11",
-    "v12",
-    "discordapi"
-  ],
+  "keywords": ["discord", "discord.js", "v11", "v12", "discordapi"],
   "author": "Meow & Verico",
   "license": "ISC",
   "bugs": {
