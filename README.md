@@ -10,12 +10,15 @@ The methods discussed [here](https://discordjs.guide/additional-info/changes-in-
 <sub><sup>*Tested methods are marked with a check.*</sup></sub>
 
 - ✔ Client.fetchUser
-- ✘ Guild.ban
-- ✘ Guild.unban
+- ✔ Guild.ban
+- ✔ Guild.unban
 - ✔ GuildMember.addRole[s]
-- ✔ GuildMember.colorRole (NOTE: must use as function)
-- ✔ GuildMember.highestRole (NOTE: must use as function)
-- ✔ GuildMember.hoistRole (NOTE: must use as function)
+- ✔ GuildMember.colorRole[\*](#note1)
+- ✔ GuildMember.highestRole[\*](#note1)
+- ✔ GuildMember.hoistRole[\*](#note1)
 - ✔ GuildMember.removeRole[s]
 - ✘ GuildMember.setRoles
 - ✔ RichEmbed
+
+# <a name="note1"></a> Notes
+\* Must use as function. It is *currently* not possible for us to make these a string. (submit a PR if you know how)
