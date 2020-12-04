@@ -32,5 +32,7 @@ The methods discussed [here](https://discordjs.guide/additional-info/changes-in-
 - ✘ VoiceConnection.playOpusStream
 - ✘ VoiceConnection.playConvertedStream
 
+- Added .get() to Managers. (no more .cache.get())
+
 ## Notes
 \* Must use as function. It is *currently* not possible for us to make these a string. (submit a PR if you know how)

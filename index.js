@@ -7,6 +7,9 @@ const {
   Guild,
   VoiceBroadcast,
   VoiceConnection,
+  ChannelManager,
+  EmojiManager,
+  GuildManager,
 } = require('discord.js');
 
 /**
@@ -17,14 +20,27 @@ const {
 
 module.exports = function () {
   // Start Other Classes
+  djs.Attachment = djs.MessageAttachment;
   djs.RichEmbed = djs.MessageEmbed;
 
   // Start Client
   Client.prototype.fetchUser = function (u1, u2, u3) {
     return UserManager.fetch(u1, u2, u3);
   };
+  Client.prototype.createVoiceBroadcast = function () {
+    return this.voice.createBroadcast;
+  };
 
   // Start Managers
+  ChannelManager.prototype.get = function (c) {
+    return this.cache.get(c);
+  };
+  EmojiManager.prototype.get = function (e) {
+    return this.cache.get(e);
+  };
+  GuildManager.prototype.get = function (g) {
+    return this.cache.get(g);
+  };
   GuildMemberRoleManager.prototype.get = function (r) {
     return this.cache.get(r);
   };
