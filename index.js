@@ -3,12 +3,17 @@ const { Client, GuildMember, UserManager, GuildMemberRoleManager } = require('di
 
 module.exports = function () {
   djs.RichEmbed = djs.MessageEmbed;
-  Client.fetchUser = UserManager.fetch;
-  GuildMember.prototype.addRole = GuildMember.prototype.addRoles = GuildMemberRoleManager.add;
-  GuildMember.prototype.removeRole = GuildMember.prototype.removeRoles = GuildMemberRoleManager.remove;
-  //GuildMember.setRole = GuildMember
+  Client.prototype.fetchUser = function (u1, u2, u3) {
+    return UserManager.fetch(u1, u2, u3);
+  };
+  GuildMember.prototype.addRole = GuildMember.prototype.addRoles = function (r1, r2) {
+    return this.roles.add(r1, r2);
+  };
+  GuildMember.prototype.removeRole = GuildMember.prototype.removeRoles = function (r1, r2) {
+    return this.roles.remove(r1, r2);
+  };
 
-  return djs; // output new discord.js module
+  return djs;
 };
 
 //module.exports() /* test */
