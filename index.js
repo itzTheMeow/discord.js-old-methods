@@ -1,4 +1,4 @@
-const djs = require('discord.js');
+const djs = require("discord.js");
 const {
   Client,
   GuildMember,
@@ -10,7 +10,9 @@ const {
   ChannelManager,
   GuildEmojiManager,
   GuildManager,
-} = require('discord.js');
+  ClientUser,
+  Collection,
+} = require("discord.js");
 
 /**
  * Adds the methods into discord.js version 12.
@@ -30,6 +32,27 @@ module.exports = function () {
   Client.prototype.createVoiceBroadcast = function () {
     return this.voice.createBroadcast;
   };
+  Client.prototype.voiceConnections = function () {
+    return this.voice.connections;
+  };
+  ClientUser.prototype.createGuild = function (g1, g2, g3) {
+    return this.client.guilds.create(g1, { region: g2, icon: g3 });
+  };
+  ClientUser.prototype.setGame = function (g1, g2) {
+    if (!g2) {
+      this.setActivity(g1);
+    } else {
+      this.setActivity(g1, { url: g2, type: "STREAMING" });
+    }
+  };
+
+  // Start Collection
+  Collection.prototype.deleteAll = function () {
+    return this.clear();
+  };
+  Collection.prototype.exists = function (e1, e2) {
+    return this.some((s) => s[e1] === e2);
+  };
 
   // Start Managers
   ChannelManager.prototype.get = function (c) {
@@ -43,6 +66,9 @@ module.exports = function () {
   };
   GuildMemberRoleManager.prototype.get = function (r) {
     return this.cache.get(r);
+  };
+  UserManager.prototype.get = function (u) {
+    return this.cache.get(u);
   };
 
   // Start GuildMember
@@ -80,13 +106,13 @@ module.exports = function () {
     return this.play(inp);
   };
   VoiceBroadcast.playOpusStream = VoiceConnection.playOpusStream = function (s) {
-    return this.play(s, { type: 'opus' });
+    return this.play(s, { type: "opus" });
   };
   VoiceBroadcast.playConvertedStream = VoiceConnection.playConvertedStream = function (s) {
-    return this.play(s, { type: 'converted' });
+    return this.play(s, { type: "converted" });
   };
 
   return djs;
 };
 
-//module.exports() /* test *
+//module.exports()
