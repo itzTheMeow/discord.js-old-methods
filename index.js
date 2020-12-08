@@ -8,7 +8,7 @@ const {
   VoiceBroadcast,
   VoiceConnection,
   ChannelManager,
-  EmojiManager,
+  GuildEmojiManager,
   GuildManager,
 } = require('discord.js');
 
@@ -35,7 +35,7 @@ module.exports = function () {
   ChannelManager.prototype.get = function (c) {
     return this.cache.get(c);
   };
-  EmojiManager.prototype.get = function (e) {
+  GuildEmojiManager.prototype.get = function (e) {
     return this.cache.get(e);
   };
   GuildManager.prototype.get = function (g) {
